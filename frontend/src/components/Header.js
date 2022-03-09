@@ -1,8 +1,29 @@
 import React from 'react'
+import { Navbar,Container, Nav } from 'react-bootstrap'
+
 
 const Header = () => {
   return (
-    <header>Header</header>
+    <header>
+         <Navbar bg="black" variant="black" expand="lg" collapseOnSelect>
+        <Container>
+     
+           <Navbar.Brand>MyShop</Navbar.Brand>
+        
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+             
+                <Nav.Link><i className='fas fa-shopping-cart'></i> Cart</Nav.Link>
+             
+             
+                <Nav.Link ><i className='fas fa-user'></i> Sign In</Nav.Link>
+              
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </header>
   )
 }
 
