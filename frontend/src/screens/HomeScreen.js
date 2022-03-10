@@ -1,21 +1,21 @@
 import React from 'react'
 import prd from '../prd'
 import { Row,Col } from 'react-bootstrap'
-import { Product } from '../components/Product'
+import Product from '../components/Product'
 
 
 const HomeScreen = () => {
   return (
     <>
-    <h1>Latest Products!</h1>
-    <Row>
-     {prd.map((prod) =>(
-         <Col sm={12} md= {6} lg={4} xl={3}>
-             <Product product = {prod} />
-         </Col>
-     ))}
-    </Row>
-    </>
+       <h1>Latest Products</h1>
+       <Row>
+         {prd.map((product) => (
+           <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
+             <Product product={product} />
+           </Col>
+         ))}
+       </Row>
+     </>
   )
 }
 
