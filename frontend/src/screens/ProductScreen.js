@@ -17,7 +17,7 @@ useEffect(() =>{
   }
   fetchProduct()
 
-})
+}, [params])
 
   //looping through each product in the products array
  
